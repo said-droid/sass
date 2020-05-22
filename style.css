@@ -1,0 +1,21 @@
+/* Error: Only 0 arguments allowed, but 1 was passed.
+ *     ,
+ * 1   | @mixin box-shadow {
+ *     |        ========== declaration
+ * ... |
+ * 30  |   @include box-shadow (10px 10px 19px -4px rgba(255, 255, 255, 0.75));
+ *     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *     '
+ *   style.scss 30:3  box-shadow()
+ *   style.scss 30:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Only 0 arguments allowed, but 1 was passed.\a     \2577 \a 1   \2502  @mixin box-shadow {\a     \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a... \2502 \a 30  \2502    @include box-shadow (10px 10px 19px -4px rgba(255, 255, 255, 0.75));\a     \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a     \2575 \a   style.scss 30:3  box-shadow()\a   style.scss 30:3  root stylesheet";
+}
